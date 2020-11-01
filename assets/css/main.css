@@ -1,0 +1,366 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #0E1554;
+}
+
+#loader-wrapper .loader-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+#loader-wrapper .loader-container .loader-logo {
+  display: block;
+  left: 50%;
+  top: 50%;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: -125px 0 0 -95px;
+}
+
+#loader-wrapper #loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  height: 200px;
+  margin: -145px 0 0 -145px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #364AFE;
+  -webkit-animation: spin 2s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader-wrapper #loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #e74c3c;
+  -webkit-animation: spin 3s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 3s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader-wrapper #loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #f9c922;
+  -webkit-animation: spin 2s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transform: translateX(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateX(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  -webkit-transform: translateX(100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateX(100%);
+  /* Firefox 16+, IE 10+, Opera */
+}
+
+.loaded #loader {
+  opacity: 0;
+}
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+}
+
+.loaded #loader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.loaded .loader-logo {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.loaded #loader-wrapper .loader-section.section-right,
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transition: all 0.3s 0.3s ease-out;
+  transition: all 0.3s 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: all 0.3s 0.6s ease-out;
+  transition: all 0.3s 0.6s ease-out;
+}
+
+.row-button {
+  margin-top: 32px;
+}
+
+.row-button .btn-primary {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 21px;
+  padding-left: 21px;
+  background-color: #364AFE;
+  font-size: 15px;
+  border-radius: 9px;
+  border: none;
+}
+
+.row-button .btn-primary.with-icon span {
+  margin-left: 6px;
+}
+
+.row-button .btn-primary:hover {
+  background-color: #2d3fe6;
+  border: none;
+}
+
+.row-button .text-secondary {
+  color: #A1A1A7;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.row-button .text-secondary span {
+  margin-left: 9px;
+}
+
+.hero-landing {
+  width: 100% !important;
+}
+
+@media (min-width: 992px) {
+  .hero-landing {
+    background-image: url(../img/hero-landing-wave.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.hero-landing .hero-navbar {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.hero-landing .hero-navbar .nav-item .nav-link {
+  color: #98A2F9;
+}
+
+.hero-landing .hero-container {
+  padding-top: 86px;
+}
+
+.hero-landing .hero-container h1 {
+  font-size: 60px;
+  color: #0E1554;
+  font-weight: 700;
+}
+
+.hero-landing .hero-container p {
+  font-size: 20px;
+  margin-top: 23px;
+  color: #0E1554;
+  font-weight: 400;
+}
+
+.hero-landing .hero-container .row-button {
+  padding-bottom: 400px;
+}
+
+section h3.title {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 52px;
+  color: #0E1554;
+}
+
+section p.desc {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 40px;
+  color: #A1A1A7;
+  margin-top: 23px;
+}
+
+section.about {
+  margin-top: 100px;
+}
+
+section.about .skills {
+  margin-top: 32px;
+}
+
+@media (min-width: 1200px) {
+  section.about .skill .tidesc {
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  section.about .skill .tidesc {
+    margin-top: 16px;
+  }
+}
+
+section.about .skill .tidesc h4 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+section.about .skill .tidesc div {
+  font-size: 15px;
+  color: #A1A1A7;
+}
+
+section.portfolio {
+  margin-top: 250px;
+}
+
+section.portfolio h5 {
+  font-size: 20px;
+  color: #0E1554;
+  font-weight: 600;
+}
+
+section.portfolio span {
+  color: #A1A1A7;
+  font-size: 14;
+}
+
+section.portfolio a.text {
+  text-decoration: none;
+}
+
+section.portfolio a.text:hover span {
+  cursor: pointer;
+  color: #0E1554;
+  text-decoration: underline;
+}
+
+section.portfolio a.text:hover span:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+section.portfolio a.text:hover .eye {
+  fill: #0E1554;
+}
+
+section.portfolio a.text span {
+  color: #A1A1A7;
+}
+
+section.hire {
+  margin-top: 250px;
+}
+
+section.hire .benefits {
+  margin-top: 1px;
+}
+
+section.hire .benefits .benefit-item {
+  margin-top: 33px;
+}
+
+section.hire .benefits .benefit-item span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+section.contact {
+  margin-top: 250px;
+  margin-bottom: 100px;
+}
+
+section.contact p.desc {
+  max-width: 465px;
+}
+
+section.contact .contacts {
+  margin-top: 44px;
+}
+
+section.contact .contacts .contact-item {
+  margin-left: 23px;
+}
+
+section.contact .contacts .contact-item#contact-instagram {
+  margin-left: 0px;
+}
+
+section.contact .contacts .contact-item:hover path.contact-icon {
+  fill: #364AFE;
+}
+/*# sourceMappingURL=main.css.map */
