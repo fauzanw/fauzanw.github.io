@@ -11,6 +11,16 @@ body {
     width: 100% !important;
 }
 
+footer {
+    .container {
+        margin-top: 200px;
+    }
+
+    @media only screen and (max-width: 767px) {
+        font-size: 10px
+    }
+}
+
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -23,26 +33,32 @@ body {
     
     .loader-container {
         position: absolute;
-        left: 50%;
         top: 50%;
-        .loader-logo {
-            display: block;
-            left: 50%;
-            top: 50%;
+        left: 50%;
+        z-index: 20;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        .loader-body {
             position: relative;
-            width: 100px;
-            height: 100px;
-            margin: -125px 0 0 -95px;
+            width: 200px;
+            height: 200px;
+            .loader-logo {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                z-index: 10;
+                width: 100px;
+                height: 100px;
+            }
         }
     }
     #loader {
-        display: block;
         position: relative;
-        left: 50%;
-        top: 50%;
         width: 200px;
         height: 200px;
-        margin: -145px 0 0 -145px;
+        z-index: 50;
         border-radius: 50%;
         border: 10px solid transparent;
         border-top-color: $primary-color;
@@ -78,7 +94,7 @@ body {
         border-top-color: #f9c922;
 
         -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-          animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     }
 }
 
