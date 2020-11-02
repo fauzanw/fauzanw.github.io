@@ -3,6 +3,16 @@ body {
   width: 100% !important;
 }
 
+footer .container {
+  margin-top: 200px;
+}
+
+@media only screen and (max-width: 767px) {
+  footer {
+    font-size: 10px;
+  }
+}
+
 #loader-wrapper {
   position: fixed;
   top: 0;
