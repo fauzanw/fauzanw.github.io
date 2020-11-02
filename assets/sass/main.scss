@@ -8,6 +8,7 @@ $navbar-item-color: #98A2F9;
 
 body {
     font-family: 'Poppins', sans-serif;
+    width: 100% !important;
 }
 
 #loader-wrapper {
@@ -190,14 +191,13 @@ body {
 }
 
 .hero-landing {
-    @media (min-width: 992px) { 
+    @media only screen and (min-width: 992px) { 
         background-image: url(../img/hero-landing-wave.svg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
-    width: 100% !important;
-    // background-color: white;
+    background-color: white;
 
     .hero-navbar {
         padding-top: 42px;
@@ -212,6 +212,9 @@ body {
         padding-top: 86px;
         h1 {
             font-size: 60px;
+            @media only screen and (max-width: 503px) {
+                font-size: 50px;
+            }
             color: $secondary-color;
             font-weight: 700;
         }
@@ -254,12 +257,14 @@ section.about {
     }
     
     .skill {
-        .tidesc {
-            @media (min-width: 1200px) { 
-                margin-left: 16px;
-            }
+        @media only screen and(max-width: 767px) {
+            margin-bottom: 50px;
+        }
 
-            @media(max-width: 1200px) {
+        .tidesc {
+            margin-left: 16px;
+
+            @media only screen and(max-width: 1200px) {
                 margin-top: 16px
             }
     
@@ -277,6 +282,7 @@ section.about {
 }
 
 section.portfolio {
+    width: 100%;
     margin-top: 250px;
 
     h5 {
@@ -312,31 +318,50 @@ section.portfolio {
             color: $gray-color;
         }
     }
+
+    .portfolio-item {
+        @media only screen and (max-width: 767px) {
+            margin-top: 25px;
+        }
+    }
 }
 
 section.hire {
     margin-top: 250px;
 
-    .benefits {
-        margin-top: 1px;
-
-        .benefit-item {
-            margin-top: 33px;
-
-            span {
-                font-size: 13px;
-                font-weight: 600;
+    .benefit-container {
+        @media only screen and (max-width: 506px) {
+            h3 {
+                text-align: center;
+            }
+        }
+        @media only screen and (max-width: 576px) { 
+            margin-top: 25px;
+        }
+        .benefits {
+            margin-top: 1px;
+    
+            .benefit-item {
+                margin-top: 33px;
+    
+                span {
+                    font-size: 13px;
+                    font-weight: 600;
+                }
             }
         }
     }
+
 }
 
 section.contact {
     margin-top: 250px;
     margin-bottom: 100px;
 
-    p.desc {
-        max-width: 465px;
+    @media only screen and (min-width: 992px) { 
+        p.desc {
+            max-width: 465px;
+        }
     }
 
     .contacts {

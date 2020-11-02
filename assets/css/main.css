@@ -1,5 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif;
+  width: 100% !important;
 }
 
 #loader-wrapper {
@@ -196,10 +197,10 @@ body {
 }
 
 .hero-landing {
-  width: 100% !important;
+  background-color: white;
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .hero-landing {
     background-image: url(../img/hero-landing-wave.svg);
     background-position: center;
@@ -225,6 +226,12 @@ body {
   font-size: 60px;
   color: #0E1554;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 503px) {
+  .hero-landing .hero-container h1 {
+    font-size: 50px;
+  }
 }
 
 .hero-landing .hero-container p {
@@ -261,13 +268,17 @@ section.about .skills {
   margin-top: 32px;
 }
 
-@media (min-width: 1200px) {
-  section.about .skill .tidesc {
-    margin-left: 16px;
+@media only screen and (max-width: 767px) {
+  section.about .skill {
+    margin-bottom: 50px;
   }
 }
 
-@media (max-width: 1200px) {
+section.about .skill .tidesc {
+  margin-left: 16px;
+}
+
+@media only screen and (max-width: 1200px) {
   section.about .skill .tidesc {
     margin-top: 16px;
   }
@@ -284,6 +295,7 @@ section.about .skill .tidesc div {
 }
 
 section.portfolio {
+  width: 100%;
   margin-top: 250px;
 }
 
@@ -322,19 +334,37 @@ section.portfolio a.text span {
   color: #A1A1A7;
 }
 
+@media only screen and (max-width: 767px) {
+  section.portfolio .portfolio-item {
+    margin-top: 25px;
+  }
+}
+
 section.hire {
   margin-top: 250px;
 }
 
-section.hire .benefits {
+@media only screen and (max-width: 506px) {
+  section.hire .benefit-container h3 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  section.hire .benefit-container {
+    margin-top: 25px;
+  }
+}
+
+section.hire .benefit-container .benefits {
   margin-top: 1px;
 }
 
-section.hire .benefits .benefit-item {
+section.hire .benefit-container .benefits .benefit-item {
   margin-top: 33px;
 }
 
-section.hire .benefits .benefit-item span {
+section.hire .benefit-container .benefits .benefit-item span {
   font-size: 13px;
   font-weight: 600;
 }
@@ -344,8 +374,10 @@ section.contact {
   margin-bottom: 100px;
 }
 
-section.contact p.desc {
-  max-width: 465px;
+@media only screen and (min-width: 992px) {
+  section.contact p.desc {
+    max-width: 465px;
+  }
 }
 
 section.contact .contacts {
