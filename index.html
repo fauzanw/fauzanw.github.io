@@ -261,12 +261,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         $(window).on('load', function () {
-            setTimeout(() => {
-                $('body').addClass('loaded');
-                AOS.init();
-                $.scrollIt()
-            }, 3000)
-            
+            $('body').addClass('loaded');
+            AOS.init();
+            $.scrollIt()
         });
     </script>
 </body>
